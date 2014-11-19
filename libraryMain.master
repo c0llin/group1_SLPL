@@ -1,4 +1,4 @@
-﻿<%@ Master Language="VB" CodeFile="library.master.vb" Inherits="library" %>
+﻿<%@ Master Language="VB" CodeFile="libraryMain.master.vb" Inherits="library" %>
 
 <!DOCTYPE html>
 
@@ -9,6 +9,11 @@
     </asp:ContentPlaceHolder>
     </title>
     <link rel="stylesheet" type="text/css" href="./css/libraryStyle.css" />
+    <style type="text/css">
+        #menu {
+            height: 34px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -38,7 +43,7 @@
                 <li><asp:HyperLink ID="link_Search" runat="server" NavigateUrl="~/search.aspx">Search</asp:HyperLink></li>
                 <li><asp:HyperLink ID="link_About" runat="server" NavigateUrl="~/about.aspx">About</asp:HyperLink></li>
                 <li><asp:HyperLink ID="link_Contact" runat="server" NavigateUrl="~/contact.aspx">Contact</asp:HyperLink></li>
-                <li><asp:HyperLink ID="link_Login" runat="server" NavigateUrl="~/login/login.aspx">Login</asp:HyperLink></li>
+                <li><asp:HyperLink ID="link_Login" runat="server" NavigateUrl="~/login/librarianLogin.aspx">Librarian Login</asp:HyperLink></li>
                 </ul>
 
             </div>  <!--close the menu div -->

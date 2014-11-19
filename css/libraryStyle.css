@@ -1,6 +1,6 @@
 ﻿body {
     background-color:#fbfbb7;
-    font-family:'Segoe UI';
+    font-family:Verdana,  Helvetica, sans-serif;
 }
 
 #container {
@@ -9,14 +9,15 @@
     margin:0 auto;
     border:1px solid black;
     width:900px;
+    height:auto;
 }
 
 h4 {
     text-shadow: 2px 2px 8px #578d5b;
-    font-family:'Segoe UI';
+    font-family:Verdana,  Helvetica, sans-serif;
     font-weight:bold;
     font-size:36pt;
-    height: 150px;
+    height: 140px;
     width: 650px;
     margin:auto;
 }
@@ -36,32 +37,35 @@ h4 {
     margin:0 auto;
     float:left;
     height:150px;
-    border-top:1px solid black;
-    border-right:1px solid black;
-    border-bottom:1px solid black;
 }
 
-#main {
+#admin_main {
     background-color:white;
+    width:698px;
     color:black;
     padding:10px;
     margin:0 auto;
-    border-right:1px solid black;
-    border-left:1px solid black;
+    float:left;
+    height:auto;
 }
 
 #footer {
     padding:10px;
     margin:0 auto;
-    border:1px solid black;
     text-align:center;
     font-size:8pt;
     font-variant:small-caps;
-    font-weight:bold;
+}
+
+#menu {
+    width:898px;
+    height:32px;
 }
 
 #nav {
     width:898px;
+    height:32px;
+    font-size:10pt;
     float:left;
     margin:0 0 3em 0;
     padding:0;
@@ -88,8 +92,80 @@ h4 {
     background-color:#fbfbb7;
 }
 
-.center_img {
+#center_img {
     display:block;
     margin-left:auto;
     margin-right:auto;
+}
+
+#admin_content {
+    margin:10px;
+    font-size:12pt;
+    font-weight:bold;
+    width:898px;
+    min-height:400px;
+}
+
+#admin_materialNav {
+    font-weight:normal;
+    background-color:#fbfbb7;
+    font-size:10pt;
+    margin: 5px;
+    padding: 5px;
+    width:150px;
+}
+
+#admin_materialNav li {
+    list-style: none;
+    margin: 5px;
+}
+
+#admin_materialNav li a {
+    text-decoration: none;
+    color: black;
+}
+
+#admin_materialNav li a:hover {
+    color:#578d5b;
+    text-decoration:none;
+}
+
+#admin_materialNav {
+    font-weight:normal;
+    background-color:#fbfbb7;
+    font-size:10pt;
+    margin: 5px;
+    padding: 5px;
+    width:150px;
+}
+
+#admin_patronNav li {
+    list-style: none;
+    margin: 5px;
+}
+
+#admin_patronNav li a {
+    text-decoration: none;
+    color: black;
+}
+
+#admin_patronNav li a:hover {
+        color: #578d5b;
+        text-decoration: none;
+}
+
+#admin_patronNav {
+    font-weight:normal;
+    background-color:#fbfbb7;
+    font-size:10pt;
+    margin: 5px;
+    padding: 5px;
+    width:150px;
+}
+
+#admin_menu {
+    padding: 10px;
+    margin: 0 auto;
+    width:160px;
+    float:left;
 }
