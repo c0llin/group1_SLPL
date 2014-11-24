@@ -9,7 +9,7 @@
     <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
     </asp:ContentPlaceHolder>
     </title>
-    <link rel="stylesheet" type="text/css" href="./css/libraryStyle.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/libraryStyle.css" />
     <style type="text/css">
         #menu {
             height: 34px;
@@ -49,6 +49,30 @@
                 </ul>
 
             </div>  <!--close the menu div -->
+            <div id="admin_content">
+
+                <div id="admin_menu">
+                Materials
+                <ul id="admin_materialNav">
+                <li><asp:HyperLink ID="link_checkIn" runat="server" NavigateUrl="~/checkInOut.aspx">Check-in/Check-out</asp:HyperLink></li>
+                <li><asp:HyperLink ID="link_addMaterial" runat="server" NavigateUrl="~/addMaterial.aspx">Add Material</asp:HyperLink></li>
+                <li><asp:HyperLink ID="link_updateMaterial" runat="server" NavigateUrl="~/updateMaterial.aspx">Update Material</asp:HyperLink></li>
+                <li><asp:HyperLink ID="link_deleteMaterial" runat="server" NavigateUrl="~/deleteMaterial.aspx">Delete Material</asp:HyperLink></li>
+                <li><asp:HyperLink ID="link_searchMaterial" runat="server" NavigateUrl="~/searchmaterial.aspx">Material Search</asp:HyperLink></li>
+                </ul>
+                Patrons
+                <ul id="admin_patronNav">
+                <li><asp:HyperLink ID="link_addPatron" runat="server" NavigateUrl="~/addPatron.aspx">Add Patron</asp:HyperLink></li>
+                <li><asp:HyperLink ID="link_updatePatron" runat="server" NavigateUrl="~/updatePatron.aspx">Update Patron</asp:HyperLink></li>
+                <li><asp:HyperLink ID="link_deletePatron" runat="server" NavigateUrl="~/deletePatron.aspx">Delete Patron</asp:HyperLink></li>
+                <li><asp:HyperLink ID="link_searchPatron" runat="server" NavigateUrl="~/searchPatron.aspx">Patron Search</asp:HyperLink></li>
+                <li><asp:HyperLink ID="link_overdueReport" runat="server" NavigateUrl="~/overdueReport.aspx">Overdue Report</asp:HyperLink></li>
+                </ul>
+            </div>  <!--close the admin_menu div -->
+
+                <!--close the admin_menu div -->
+
+                
 
             <div id="main">
                 <asp:ContentPlaceHolder id="ContentPlaceHolder3" runat="server">

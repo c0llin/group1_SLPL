@@ -8,7 +8,7 @@
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
     </title>
-    <link rel="stylesheet" type="text/css" href="./css/libraryStyle.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/libraryStyle.css" />
 
 </head>
 <body>
@@ -39,7 +39,7 @@
                 <li><asp:HyperLink ID="link_Search" runat="server" NavigateUrl="~/search.aspx">Search</asp:HyperLink></li>
                 <li><asp:HyperLink ID="link_About" runat="server" NavigateUrl="~/about.aspx">About</asp:HyperLink></li>
                 <li><asp:HyperLink ID="link_Contact" runat="server" NavigateUrl="~/contact.aspx">Contact</asp:HyperLink></li>
-                <li><asp:HyperLink ID="link_Login" runat="server" NavigateUrl="~/login/librarianLogin.aspx">Login</asp:HyperLink></li>
+                <li style="float:right;"><asp:LoginStatus ID="LoginStatus1" runat="server" /></li>
                 </ul>
 
             </div>  <!--close the menu div -->
