@@ -15,7 +15,7 @@ h4 {
     text-shadow: 2px 2px 8px #578d5b;
     font-weight:bold;
     font-size:36pt;
-    height: 140px;
+    height: 150px;
     width: 640px;
     margin:auto;
 }
@@ -24,17 +24,27 @@ h4 {
     background-color:white;
     color:black;
     margin:0 auto;
+    width:900px;
+    height:150px;
+    float:left;
+    text-align:center;  
+}
+#header_text{
+    background-color:white;
+    color:black;
+    margin:0 auto;
     width:650px;
     height:150px;
     float:left;
-    text-align:center;    
+    text-align:center;
 }
-
 #right_header {
-    padding:10px;
+    padding-left:10px;
+    padding-right:10px;
     margin:0 auto;
     float:left;
-    height:150px;
+    height:140px;
+    width:200px;
 }
 
 #menu {
@@ -168,4 +178,9 @@ h4 {
     text-align:center;
     font-size:8pt;
     font-variant:small-caps;
+}
+
+
+.center{
+    margin: 0 auto;
 }
