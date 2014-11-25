@@ -11,47 +11,47 @@
     height:auto;
 }
 
-h4 {
-    text-shadow: 2px 2px 8px #578d5b;
-    font-weight:bold;
-    font-size:36pt;
-    height: 150px;
-    width: 640px;
-    margin:auto;
-}
-
 #header {
     background-color:white;
     color:black;
     margin:0 auto;
-    width:900px;
+    width:100%;
     height:150px;
     float:left;
     text-align:center;  
 }
+
 #header_text{
     background-color:white;
     color:black;
     margin:0 auto;
-    width:650px;
-    height:150px;
+    width:75%;
+    height:140px;
     float:left;
     text-align:center;
 }
+
+h4 {
+    text-shadow: 2px 2px 8px #578d5b;
+    font-weight:bold;
+    font-size:36pt;
+    width:100%;
+    height: 140px;
+    float:left;
+    margin:auto;
+}
+
 #right_header {
-    padding-left:10px;
-    padding-right:10px;
     margin:0 auto;
     float:left;
     height:140px;
-    width:200px;
+    width:25%;
 }
 
 #menu {
     width:898px;
     height:32px;
 }
-
 
 #nav {
     width:898px;
@@ -67,7 +67,6 @@ h4 {
 #nav li {
     float:left;
 }
-
 
 #nav_login{
     float:right
@@ -87,11 +86,54 @@ h4 {
     background-color:#fbfbb7;
 }
 
-#center_img {
-    display:block;
+.center_img {
+    float:left;
+    width:100%;
+    height:100%;
     margin-left:auto;
     margin-right:auto;
 }
+
+#main {
+    width:100%;
+    height:auto;
+    text-align:left;
+    margin:auto;
+    float:left;
+}
+
+#adminHeader {
+    width:100%;
+    height:30px;
+    padding:10px;
+    text-align:center;
+    font-weight:bold;
+    font-size:18pt;
+}
+
+#adminHomeButtons {
+    width:898px;
+    height:410px;
+}
+
+#adminHomeLeftButtons {
+    float:left;
+    height: 400px; 
+    width:35%;
+    list-style:none;
+    text-align: center;
+    margin-left:75px;
+    margin-top: 0 auto;
+    margin-bottom: 0 auto;
+    margin-right: 0 auto;
+}
+
+#adminHomeRightButtons {
+    float: left;
+    text-align: center;
+    height: 400px;
+    list-style: none;
+}    
 
 #admin_content {
     margin-top:10px;
@@ -180,7 +222,54 @@ h4 {
     font-variant:small-caps;
 }
 
-
 .center{
     margin: 0 auto;
+}
+
+#adminHomeButtons li {
+    margin-top:25px;
+    margin-bottom:25px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+}
+
+.button-link {
+    display:block;
+    padding-bottom:40px;
+    padding-top:40px;
+    background: #578d5b;
+    color:#fbfbb7;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: solid 1px #578d5b;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    text-decoration:none;
+}
+.button-link:hover {
+    background:#fbfbb7;
+    color:black;
+    border: solid 1px #578d5b;
+    text-decoration: none;
+}
+.button-link:active {
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    background: #2E5481;
+    border: solid 1px #578d5b;
+}
+
+.button-width{
+    width: 300px;
 }

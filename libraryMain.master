@@ -8,11 +8,7 @@
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
     <link rel="stylesheet" type="text/css" href="./css/libraryStyle.css" />
-    <style type="text/css">
-        #menu {
-            height: 34px;
-        }
-    </style>
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -23,8 +19,9 @@
                 <div id="header_text">
                     <h4>South Liberty <br /> Public Library</h4>
                 </div> <!-- END header_text -->
+
                 <div id="right_header">
-                    <asp:Image ID="logo" runat="server" Height="150px" ImageUrl="~/SLPL_logo.png" Width="216px" />
+                    <asp:Image ID="logo" CssClass="center_img" runat="server" ImageUrl="~/SLPL_logo.png" />
                 </div> <!-- END right_logo -->
 
             </div>  <!--close the header div -->
