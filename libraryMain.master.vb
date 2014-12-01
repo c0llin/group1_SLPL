@@ -25,5 +25,12 @@ Partial Class library
     '        menuItems.Remove(adminItem)
     '    End If
     'End Sub
+
+    Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+        'display the date for the copyright
+        lbl_copy.Text = DateTime.Now.Year
+
+    End Sub
 End Class
 

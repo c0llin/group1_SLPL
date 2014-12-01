@@ -15,30 +15,54 @@
 
         <div id="container">
             
-            <div id="header">
+            <div id="header_container">
+                
+                <div id="left_logo">
+                    <asp:Image ID="SLPL_library" CssClass="center_img" runat="server" ImageUrl="~/LibraryBuilding.jpg" AlternateText="SLPL Library" />
+                </div> <!-- Close left_logo -->
+                
                 <div id="header_text">
-                    <h4>South Liberty <br /> Public Library</h4>
-                </div> <!-- END header_text -->
+                    <h4>South Liberty<br />Public Library</h4>
+                    321 Main St., <br />
+                    South Liberty, IA 12345<br />
+                    319.555.1212&nbsp;&nbsp;<a href="https://www.google.com/maps/search/public+library+near+North+Liberty,+IA/@41.7455985,-91.6168012,15z?hl=en">(map)</a>
+                </div> <!-- Close header_text -->
 
-                <div id="right_header">
-                    <asp:Image ID="logo" CssClass="center_img" runat="server" ImageUrl="~/SLPL_logo.png" />
-                </div> <!-- END right_logo -->
+                <div id="right_logo">
+                    <asp:Image ID="logo" CssClass="center_img" runat="server" ImageUrl="~/SLPL_logo.png" AlternateText="SLPL Logo" />
+                </div> <!-- Close right_logo -->
 
-            </div>  <!--close the header div -->
+            </div>  <!--Close the header_container div -->
 
-            <div id="menu">
+            <div id="menu_container">     
+                
+                <div id="menu">
 
-                <ul id="nav">
-                <li><asp:HyperLink ID="link_Home" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink></li>
-                <li><asp:HyperLink ID="link_Search" runat="server" NavigateUrl="~/search.aspx">Search</asp:HyperLink></li>
-                <li><asp:HyperLink ID="link_About" runat="server" NavigateUrl="~/about.aspx">About</asp:HyperLink></li>
-                <li><asp:HyperLink ID="link_Contact" runat="server" NavigateUrl="~/contact.aspx">Contact</asp:HyperLink></li>
-                <li><asp:HyperLink ID="link_Admin" runat="server" NavigateUrl="~/login/Login.aspx">Admin</asp:HyperLink></li>
-                <li><asp:HyperLink ID="link_Patron" runat="server" NavigateUrl="~/login/Login.aspx">Patron</asp:HyperLink></li>
-                <li style="float:right;"><asp:LoginStatus ID="LoginStatus1" runat="server" /></li>
-                </ul>
+                    <asp:Menu ID="libraryMenu" runat="server" Orientation="Horizontal" StaticSubMenuIndent="16px" CssClass="static">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/search.aspx" Text="Search" Value="Search"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/about.aspx" Text="About" Value="About"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/contact.aspx" Text="Contact" Value="Contact"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/admin/default.aspx" Text="Admin" Value="Admin"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+            
+                </div>  <!--close the menu div -->
+            
+                <div id="search">
+                    SearchBox
+                </div>  <!--close the search div -->
 
-            </div>  <!--close the menu div -->
+                <div id="login_status">
+                    
+                    <ul id="login_nav">
+                    <li><asp:HyperLink ID="link_Login" runat="server" NavigateUrl="~/login/Login.aspx">Log In</asp:HyperLink></li>
+                    </ul>
+
+                </div>  <!--close the login_status div -->
+
+            </div>  <!--close the menu_containter div -->
 
             <div id="main">
                 <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
@@ -48,7 +72,7 @@
 
             <div id="footer">
 
-                &copy; 2014 Group 1 | MSCI:3300 Software Design and Development
+                &copy; <asp:Label ID="lbl_copy" runat="server" Text=""></asp:Label> South Liberty Public Library
 
             </div>  <!--close the footer div -->
 
