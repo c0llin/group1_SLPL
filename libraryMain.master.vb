@@ -28,10 +28,18 @@ Partial Class library
 
     End Sub
 
+
+
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         'display the date for the copyright
         lbl_copy.Text = DateTime.Now.Year
+
+    End Sub
+
+    Protected Sub LoginStatus_LoggedOut(sender As Object, e As EventArgs) Handles LoginStatus.LoggedOut
+
+        Response.Redirect("~/default.aspx")
 
     End Sub
 End Class
