@@ -40,11 +40,11 @@
 
                     <asp:Menu ID="libraryMenu" runat="server" Orientation="Horizontal" StaticSubMenuIndent="16px" CssClass="static">
                         <Items>
-                            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/default.aspx" Text="Home" Value="Home"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/search.aspx" Text="Search" Value="Search"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/about.aspx" Text="About" Value="About"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/contact.aspx" Text="Contact" Value="Contact"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/admin/default.aspx" Text="Admin" Value="Admin"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/admin/defaultAdmin.aspx" Text="Admin" Value="Admin"></asp:MenuItem>
                         </Items>
                     </asp:Menu>
             
@@ -54,11 +54,9 @@
                     SearchBox
                 </div>  <!--close the search div -->
 
-                <div id="login_status">
+                <div class="login_status">   
                     
-                    <ul id="login_nav">
-                    <li><asp:HyperLink ID="link_Login" runat="server" NavigateUrl="~/login/Login.aspx">Log In</asp:HyperLink></li>
-                    </ul>
+                        <asp:LoginStatus ID="LoginStatus" runat="server" />   
 
                 </div>  <!--close the login_status div -->
 

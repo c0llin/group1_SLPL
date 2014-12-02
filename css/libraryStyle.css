@@ -69,7 +69,7 @@ h4 {
     width:100%;
     margin:0 auto;
     background-color:#578d5b;
-    height:32px;
+    height:33px;
     clear:both;
     -webkit-box-sizing:border-box;
     -moz-box-sizing:border-box;
@@ -80,13 +80,13 @@ h4 {
     margin:0 auto;
     float:left;
     display:block;
-    width:35%;
+    width:55%;
     height:32px;
     background-color:#578d5b;
 }
 
 #search {
-    width:50%;
+    width:35%;
     margin:0 auto;
     float:left;
     text-align:center;
@@ -96,13 +96,13 @@ h4 {
 
 #libraryMenu {
     font-size:10pt;
-    width:auto;
+    width:100%;
     float:left;
     margin:0 0 3em 0;
     padding:0;
     list-style:none;
     background-color:#578d5b;
-    height:32px;
+    height:auto;
 }
 
 #libraryMenu li {
@@ -114,7 +114,7 @@ h4 {
     padding:8px 15px !important;
     text-decoration:none;
     font-weight:bold;
-    color:#fbfbb7;
+    color:black;
     border-right: 1px solid #ccc;
 }
 
@@ -133,40 +133,28 @@ h4 {
     border-bottom:1px solid #ccc;
 }
 
-#login_status {
-    width:15%;
-    margin:0 auto;
-    float:left;
-    text-align:right;
-    background-color:#578d5b;
-    height:32px;
-}
-
-#login_nav {
-    font-size:10pt;
-    float:left;
-    margin:0 0 3em 0;
-    padding:0;
-    list-style:none;
-    background-color:#578d5b;
-    height:32px;
+.login_status {
+    display:block;
     float:right;
+    text-align:left;
+    text-decoration:none;
+    background-color:#578d5b;
+    border-right:1px solid #ccc;
+    height:32px;
+    font-size:10pt;
 }
 
-#login_nav li {
-    float:left;
-}
-
-#login_nav li a {
+.login_status a {
     display:block;
     padding:8px 15px;
     text-decoration:none;
     font-weight:bold;
-    color:#fbfbb7;
+    color:black;
     border-right: 1px solid #ccc;
+    margin-left: 0px;
 }
 
-#login_nav li a:hover {
+.login_status a:hover {
     color: black;
     background-color: #fbfbb7;
 }

@@ -1,5 +1,5 @@
 ﻿
-Partial Class Patron_default
+Partial Class Patron_defaultPatron
     Inherits System.Web.UI.Page
 
 End Class
