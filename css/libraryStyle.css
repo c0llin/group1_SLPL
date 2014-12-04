@@ -113,7 +113,7 @@ h4 {
     padding:0;
     list-style:none;
     background-color:#578d5b;
-    height:auto;
+    height:35px;
 }
 
 #libraryMenu li {
@@ -151,7 +151,7 @@ h4 {
     text-decoration:none;
     background-color:#578d5b;
     border-right:1px solid #ccc;
-    height:32px;
+    height:35px;
     font-size:10pt;
 }
 
@@ -180,7 +180,7 @@ h4 {
     text-align:center;
     font-weight:bold;
     font-size:18pt;
-    height: 32px;
+    height: 35px;
     margin-top:0px;
 }
 

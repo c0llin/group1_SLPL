@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  
+    <siteMapNode url="" title=""  description="">
+      
+        <siteMapNode url="~/default.aspx" title="Home">
+          
+        </siteMapNode>
+  
+        <siteMapNode url="~/admin/defaultAdmin.aspx" title="Admin" description="" >
+
+            <siteMapNode url="~/admin/addPatron.aspx" title="Add Patron" description="" />
+            <siteMapNode url="~/admin/viewAllPatrons.aspx" title="View All Patrons" description="" />
+            
+        </siteMapNode>
+
+        <siteMapNode url="~/admin/defaultPatron.aspx" title="Patron" description="" >
+
+        </siteMapNode>
+
+        <siteMapNode url="~/Login.aspx" title="Login"></siteMapNode>
+      
+    </siteMapNode>
+</siteMap>

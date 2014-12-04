@@ -44,14 +44,17 @@
                             <asp:MenuItem NavigateUrl="~/search.aspx" Text="Search" Value="Search"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/about.aspx" Text="About" Value="About"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/contact.aspx" Text="Contact" Value="Contact"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/admin/defaultAdmin.aspx" Text="Admin" Value="Admin"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/admin/defaultAdmin.aspx" Text="Admin" Value="Admin">
+                                <asp:MenuItem NavigateUrl="~/admin/addPatron.aspx" Text="Add New Patron" Value="Add New Patron" />
+                                <asp:MenuItem NavigateUrl="~/admin/viewAllPatrons.aspx" Text="View All Patrons" Value="View All Patrons" />
+                            </asp:MenuItem>
                         </Items>
                     </asp:Menu>
             
                 </div>  <!--close the menu div -->
             
                 <div id="search">
-                    <asp:TextBox ID="tb_search" Columns="70" runat="server"></asp:TextBox><asp:Image ID="img_search" runat="server" ImageUrl="~/css/images/search.png" />
+                    <asp:TextBox ID="tb_search" width="50%" align="center" runat="server"></asp:TextBox><asp:Image ID="img_search" runat="server" ImageUrl="~/css/images/search.png" />
                 </div>  <!--close the search div -->
 
                 <div class="login_status">   
