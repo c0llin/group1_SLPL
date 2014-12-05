@@ -8,7 +8,7 @@
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
     <link rel="stylesheet" type="text/css" href="./css/libraryStyle.css" />
-
+    <link rel="stylesheet" type="text/css" href="./bootstrap.min.css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -80,5 +80,7 @@
         </div>  <!--close the container div -->
     
     </form>
+    <script src="js/bootstrap.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 </body>
 </html>
