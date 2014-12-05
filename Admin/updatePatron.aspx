@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Admin/libraryAdmin.master" AutoEventWireup="false" CodeFile="updatePatron.aspx.vb" Inherits="Admin_updatePatron" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/libraryMain.master" AutoEventWireup="false" CodeFile="updatePatron.aspx.vb" Inherits="Admin_updatePatron" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>

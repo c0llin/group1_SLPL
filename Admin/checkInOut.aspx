@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Admin/libraryAdmin.master" AutoEventWireup="false" CodeFile="checkInOut.aspx.vb" Inherits="checkInOut" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/libraryMain.master" AutoEventWireup="false" CodeFile="checkInOut.aspx.vb" Inherits="checkInOut" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
