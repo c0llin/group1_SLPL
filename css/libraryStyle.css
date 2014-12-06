@@ -22,7 +22,6 @@
     font-size:10pt;  
 }
 
-
 .center_img {
     float:left;
     width:100%;
@@ -127,6 +126,8 @@ h4 {
     font-weight:bold;
     color:black;
     border-right: 1px solid #ccc;
+    background-color:#578d5b;   
+    width:auto; 
 }
 
 #libraryMenu li a:hover {
@@ -167,139 +168,12 @@ h4 {
 
 .login_status a:hover {
     color: black;
-    background-color: #fbfbb7;
+    background-color: #fbfbb7;  
 }
 
 #main {
     width:100%;
-    height:500px;
-}
-
-#adminHeader {
-    width:898px;
-    text-align:center;
-    font-weight:bold;
-    font-size:18pt;
-    height: 35px;
-    margin-top:0px;
-}
-
-#adminHomeButtons {
-    width:898px;
-    height:450px;
-}
-
-#adminHomeLeftButtons {
-    float:left;
-    height: 400px; 
-    width:35%;
-    list-style:none;
-    text-align: center;
-    margin-left:80px;
-    margin-top: 0 auto;
-    margin-bottom: 0 auto;
-    margin-right: 0 auto;
-}
-
-#adminHomeRightButtons {
-    float: left;
-    text-align: center;
-    height: 400px;
-    list-style: none;
-}    
-
-#admin_content {
-    margin-top:10px;
-    font-size:12pt;
-    font-weight:bold;
-    width:898px;
-    min-height:400px;
-}
-
-#admin_materialNav {
-    font-weight:normal;
-    font-size:10pt;
-    width:150px;
-}
-
-#admin_materialNav li {
-    list-style: none;
-    margin: 5px;
-}
-
-#admin_materialNav li a {
-    text-decoration: none;
-    color: black;
-}
-
-#admin_materialNav li a:hover {
-    color:#578d5b;
-    text-decoration:none;
-    background-color:#fbfbb7;
-}
-
-#admin_materialNav {
-    font-weight:normal;
-    font-size:10pt;
-    margin: 5px;
-    padding: 5px;
-    width:150px;
-}
-
-#admin_patronNav li {
-    list-style: none;
-    margin: 5px;
-}
-
-#admin_patronNav li a {
-    text-decoration: none;
-    color: black;
-}
-
-#admin_patronNav li a:hover {
-        color: #578d5b;
-        text-decoration: none;
-        background-color:#fbfbb7;
-}
-
-#admin_patronNav {
-    font-weight:normal;
-    font-size:10pt;
-    margin: 5px;
-    padding: 5px;
-    width:150px;
-}
-
-#admin_menu {
-    padding: 10px;
-    margin: 0 auto;
-    width:160px;
-    float:left;
-}
-
-#admin_main {
-    background-color:white;
-    width:698px;
-    color:black;
-    padding:0px;
-    margin:0 auto;
-    float:left;
     height:auto;
-    font-size:12pt;
-    font-weight:normal;
-}
-
-#adminHome {
-    background-color:white;
-    width:898px;
-    color:black;
-    padding:0px;
-    margin:0 auto;
-    float:left;
-    height:auto;
-}
-
-#main {
     clear:both;
 }
 
@@ -362,4 +236,19 @@ h4 {
 
 .button-width{
     width: 300px;
+}
+
+.deletedrecordhighlight {
+    color:green;
+    font-style:italic;
+    font-weight:bold;
+    text-decoration:underline;
+}
+
+#GridView1 {
+    font-size:10pt;
+}
+
+#FormView1 {
+    font-size:10pt;
 }

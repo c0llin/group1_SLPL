@@ -47,6 +47,8 @@
                             <asp:MenuItem NavigateUrl="~/admin/defaultAdmin.aspx" Text="Admin" Value="Admin">
                                 <asp:MenuItem NavigateUrl="~/admin/addPatron.aspx" Text="Add New Patron" Value="Add New Patron" />
                                 <asp:MenuItem NavigateUrl="~/admin/viewAllPatrons.aspx" Text="View All Patrons" Value="View All Patrons" />
+                                <asp:MenuItem NavigateUrl="~/admin/viewAllMaterials.aspx" Text="View All Materials" Value="View All Materials" />
+                                <asp:MenuItem NavigateUrl="~/admin/addMaterial.aspx" Text="Add New Material" Value="Add New Material" />
                             </asp:MenuItem>
                         </Items>
                     </asp:Menu>
