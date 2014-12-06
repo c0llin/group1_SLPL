@@ -51,6 +51,10 @@
 
     </asp:SqlDataSource>
 
+    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:msci3300_g1ConnectionString %>" 
+        SelectCommand="SELECT [Available] FROM [library_Available]">
+    </asp:SqlDataSource>
+
     <asp:FormView ID="FormView1" runat="server" DataKeyNames="MaterialID" DataSourceID="SqlDataSource1">
         
         <EditItemTemplate>
@@ -58,7 +62,8 @@
             <table>
 
                 <tr>
-                    <td align="right">MaterialID:</td><td align="left"><asp:TextBox ID="tb_materialID" runat="server" enabled="false" Text='<%# Eval("MaterialID") %>' /></td>
+                    <td align="right">MaterialID:</td>
+                    <td align="left"><asp:TextBox ID="tb_materialID" runat="server" enabled="false" Text='<%# Eval("MaterialID") %>' /></td>
                 </tr>
 
                 <tr>
@@ -70,37 +75,45 @@
                 </tr>
 
                 <tr>
-                    <td align="right">Call Number:</td><td align="left"><asp:TextBox ID="tb_callNumber" runat="server" Text='<%# Bind("CallNumber") %>' /></td>
+                    <td align="right">Call Number:</td>
+                    <td align="left"><asp:TextBox ID="tb_callNumber" runat="server" Text='<%# Bind("CallNumber") %>' /></td>
                 </tr>
 
                 <tr>
-                    <td align="right">Title:</td><td align="left"><asp:TextBox ID="tb_title" runat="server" Text='<%# Bind("Title") %>' /></td>
+                    <td align="right">Title:</td>
+                    <td align="left"><asp:TextBox ID="tb_title" runat="server" Text='<%# Bind("Title") %>' /></td>
                 </tr>
 
                 <tr>
-                    <td align="right">Author:</td><td align="left"><asp:TextBox ID="tb_author" runat="server" Text='<%# Bind("Author") %>' /></td>
+                    <td align="right">Author:</td>
+                    <td align="left"><asp:TextBox ID="tb_author" runat="server" Text='<%# Bind("Author") %>' /></td>
                 </tr>
 
                 <tr>
-                    <td align="right">Publisher:</td><td align="left"><asp:TextBox ID="tb_publisher" runat="server" Text='<%# Bind("Publisher") %>' /></td>
+                    <td align="right">Publisher:</td>
+                    <td align="left"><asp:TextBox ID="tb_publisher" runat="server" Text='<%# Bind("Publisher") %>' /></td>
                 </tr>
 
                 <tr>
-                    <td align="right">Copyright:</td><td align="left"><asp:TextBox ID="tb_copyright" runat="server" Text='<%# Bind("Copyright") %>' /></td>
+                    <td align="right">Copyright:</td>
+                    <td align="left"><asp:TextBox ID="tb_copyright" runat="server" Text='<%# Bind("Copyright") %>' /></td>
                 </tr>
             
                  <tr>
-                    <td align="right">ISBN:</td><td align="left"><asp:TextBox ID="tb_ISBN" runat="server" Text='<%# Bind("ISBN") %>' /></td>
+                    <td align="right">ISBN:</td>
+                     <td align="left"><asp:TextBox ID="tb_ISBN" runat="server" Text='<%# Bind("ISBN") %>' /></td>
                 </tr>
             
                 <tr>
-                    <td align="right">Material Description:</td><td align="left"><asp:TextBox ID="tb_MaterialDescription" runat="server" Text='<%# Bind("MaterialDescription") %>' /></td>
+                    <td align="right">Material Description:</td>
+                    <td align="left"><asp:TextBox ID="tb_MaterialDescription" runat="server" Text='<%# Bind("MaterialDescription") %>' /></td>
                 </tr>
                  
-                <tr>
-                    <td align="right">Available:</td><td align="left"><asp:TextBox ID="tb_available" runat="server" Text='<%# Bind("Available")%>' /></td>
+                 <tr>
+                    <td align="right">Available:</td>
+                    <td align="left"><asp:TextBox ID="tb_Available" runat="server" Text='<%# Bind("Available") %>' /></td>
                 </tr>
-         
+
             </table>
 
             <asp:Button ID="UpdateButton" runat="server"  CausesValidation="True" CommandName="Update" Text="Update" />

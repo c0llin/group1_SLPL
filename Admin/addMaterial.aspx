@@ -4,10 +4,14 @@
     <title>Add New Material</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:msci3300_g1ConnectionString %>" 
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:msci3300_g1ConnectionString %>"
+         
         DeleteCommand="DELETE FROM [library_Materials] WHERE [MaterialID] = @MaterialID" 
+
         InsertCommand="INSERT INTO [library_Materials] ([MaterialType], [CallNumber], [Title], [Author], [Publisher], [Copyright], [ISBN], [MaterialDescription], [PhotoName], [Available]) VALUES (@MaterialType, @CallNumber, @Title, @Author, @Publisher, @Copyright, @ISBN, @MaterialDescription, @PhotoName, @Available)" 
+       
         SelectCommand="SELECT [MaterialID], [MaterialType], [CallNumber], [Title], [Author], [Publisher], [Copyright], [ISBN], [MaterialDescription], [PhotoName], [Available] FROM [library_Materials]" 
+        
         UpdateCommand="UPDATE [library_Materials] SET [MaterialType] = @MaterialType, [CallNumber] = @CallNumber, [Title] = @Title, [Author] = @Author, [Publisher] = @Publisher, [Copyright] = @Copyright, [ISBN] = @ISBN, [MaterialDescription] = @MaterialDescription, [PhotoName] = @PhotoName, [Available] = @Available WHERE [MaterialID] = @MaterialID">
         
         <DeleteParameters>
@@ -42,8 +46,8 @@
         </UpdateParameters>
     
     </asp:SqlDataSource>
-
-    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:msci3300_g1ConnectionString %>" 
+    
+    <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:msci3300_g1ConnectionString %>" 
         SelectCommand="SELECT [MaterialType] FROM [library_MaterialType]">
     </asp:SqlDataSource>
     
@@ -64,7 +68,7 @@
                 <tr>
                     <td align="right">Material Type:</td>
                     <td align="left">
-                        <asp:DropDownList ID="ddl_materialType" runat="server" DataSourceID="SqlDataSource2"
+                        <asp:DropDownList ID="ddl_materialType" runat="server" DataSourceID="SqlDataSource4"
                             DataTextField="MaterialType" DataValueField="MaterialType" SelectedValue='<%# Bind("MaterialType") %>'>
                         </asp:DropDownList></td>
                 </tr>

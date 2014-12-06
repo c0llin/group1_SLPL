@@ -44,10 +44,12 @@
                             <asp:MenuItem NavigateUrl="~/search.aspx" Text="Search" Value="Search"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/about.aspx" Text="About" Value="About"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/contact.aspx" Text="Contact" Value="Contact"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/admin/defaultAdmin.aspx" Text="Admin" Value="Admin">
-                                <asp:MenuItem NavigateUrl="~/admin/addPatron.aspx" Text="Add New Patron" Value="Add New Patron" />
+                            <asp:MenuItem NavigateUrl="~/admin/defaultAdmin.aspx" Text="Admin" Value="Admin">                                
                                 <asp:MenuItem NavigateUrl="~/admin/viewAllPatrons.aspx" Text="View All Patrons" Value="View All Patrons" />
+                                <asp:MenuItem NavigateUrl="~/admin/searchPatron.aspx" Text="Search Patrons" Value="Search Patrons" />
+                                <asp:MenuItem NavigateUrl="~/admin/addPatron.aspx" Text="Add New Patron" Value="Add New Patron" />
                                 <asp:MenuItem NavigateUrl="~/admin/viewAllMaterials.aspx" Text="View All Materials" Value="View All Materials" />
+                                <asp:MenuItem NavigateUrl="~/admin/searchMaterial.aspx" Text="Search Materials" Value="Search Materials" />
                                 <asp:MenuItem NavigateUrl="~/admin/addMaterial.aspx" Text="Add New Material" Value="Add New Material" />
                             </asp:MenuItem>
                         </Items>
