@@ -12,6 +12,10 @@
             <siteMapNode url="~/admin/addPatron.aspx" title="Add Patron" description="" />
             <siteMapNode url="~/admin/viewAllPatrons.aspx" title="View All Patrons" description="" />
             <siteMapNode url="~/admin/viewAllMaterials.aspx" title="View All Materials" description="" />
+            <siteMapNode url="~/admin/viewAllRentals.aspx" title="View All Rentals" description="" />
+            <siteMapNode url="~/admin/rentMaterial.aspx" title="Rent a Material" description="" />
+            <siteMapNode url="~/admin/returnMaterial.aspx" title="Return a Material" description="" />
+            <siteMapNode url="~/admin/materialsDueToday.aspx" title="Materials Due Today" description="" />
             
         </siteMapNode>
 
