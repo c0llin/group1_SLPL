@@ -10,7 +10,7 @@
 
         SelectCommand="SELECT library_UserProfile.UserID, library_UserProfile.FirstName, library_UserProfile.LastName, library_UserProfile.City, library_UserProfile.PostalCode, aspnet_Users.UserName, aspnet_Roles.RoleName, aspnet_Users.UserId, aspnet_Membership.Email FROM library_UserProfile INNER JOIN aspnet_Users ON library_UserProfile.UserID = aspnet_Users.UserId INNER JOIN aspnet_UsersInRoles ON aspnet_Users.UserId = aspnet_UsersInRoles.UserId INNER JOIN aspnet_Roles ON aspnet_UsersInRoles.RoleId = aspnet_Roles.RoleId INNER JOIN aspnet_Membership ON aspnet_Users.UserId = aspnet_Membership.UserId WHERE (library_UserProfile.UserID = @UserID)"
 
-        UpdateCommand="UPDATE [library_UserProfile] SET [FirstName] = @FirstName, [LastName = @LastName, [City] = @City, [PostalCode] = @PostalCode WHERE [UserID] = @UserID">
+        UpdateCommand="UPDATE [library_UserProfile] SET [FirstName] = @FirstName, [LastName] = @LastName, [City] = @City, [PostalCode] = @PostalCode WHERE [UserID] = @UserID">
 
         <DeleteParameters>
             <asp:Parameter Name="UserID" Type="Object" />
