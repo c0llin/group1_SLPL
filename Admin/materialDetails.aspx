@@ -188,8 +188,14 @@
 
             <asp:DataList ID="BookPhotoDataList" runat="server" DataSourceID="SQLDataSource1">
                 <ItemTemplate>
-                    <asp:Image ID="BookImage1" runat="server"
-                        ImageUrl='<%# Eval("PhotoName", "~/rental_materials/{0}")%>'/>
+                    <a href="<%# Eval("PhotoName", "../rental_materials/{0}")%>" target='_blank'>
+                        <asp:Image ID="BookImage1" runat="server"
+                            ImageUrl='<%# Eval("PhotoName", "~/rental_materials/{0}")%>'
+                            Height="150px"
+                            
+                            
+                            />
+                    </a>
                 </ItemTemplate>
             </asp:DataList>
 
