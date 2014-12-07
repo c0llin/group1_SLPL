@@ -56,6 +56,7 @@
                                 <asp:MenuItem NavigateUrl="~/admin/searchMaterial.aspx" Text="Search Materials" Value="Search Materials" />
                                 <asp:MenuItem NavigateUrl="~/admin/addMaterial.aspx" Text="Add New Material" Value="Add New Material" />
                                 <asp:MenuItem NavigateUrl="~/admin/rentMaterial.aspx" Text="Rent Material" Value="Rent Material" />
+                                <asp:MenuItem NavigateUrl="~/admin/returnMaterial.aspx" Text="Return Material" Value="Return Material" />
                                 <asp:MenuItem NavigateUrl="~/admin/viewAllRentals.aspx" Text="View Rented Materials" Value="View Rented Materials" />
                                 <asp:MenuItem NavigateUrl="~/admin/materialsDueToday.aspx" Text="Materials Due Today" Value="Materials Due Today" />
                             </asp:MenuItem>

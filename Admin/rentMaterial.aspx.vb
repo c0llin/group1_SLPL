@@ -10,9 +10,9 @@ Partial Class Admin_rentMaterial
         Dim strMaterialID As String = tb_MaterialID.Text
         Dim strUserName As String = tb_UserName.Text
         Dim RentDate As DateTime = DateTime.Now
-        Dim DateDueBack As DateTime = DateAdd("d", 3, Today)
+        Dim DateDueBack As DateTime = DateAdd("d", 30, Today)
 
-        Dim sqlConn As New SqlConnection(ConfigurationManager.ConnectionStrings("db_library").ConnectionString)
+        Dim sqlConn As New SqlConnection(ConfigurationManager.ConnectionStrings("msci3300_g1ConnectionString").ConnectionString)
 
         Dim sqlAdp As New SqlDataAdapter
         Dim sqlCmd As New SqlCommand
@@ -31,6 +31,6 @@ Partial Class Admin_rentMaterial
 
         Response.Redirect("viewAllRentals.aspx")
 
-    End Sub
+    End Sub 'btn_Rent_Click
 
 End Class
