@@ -4,6 +4,31 @@
     <title>View, Edit & Delete Patron Details</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:msci3300_g1ConnectionString %>"
+        
+        DeleteCommand="DELETE FROM [aspnet_Users] WHERE [UserID] = @UserID"
+
+        SelectCommand="SELECT library_UserProfile.FirstName, library_UserProfile.LastName, library_UserProfile.City, library_UserProfile.PostalCode, aspnet_Users.UserName, aspnet_Roles.RoleName, library_UserProfile.UserID FROM aspnet_Users INNER JOIN library_UserProfile ON aspnet_Users.UserId = library_UserProfile.UserID INNER JOIN aspnet_Roles ON aspnet_Users.ApplicationId = aspnet_Roles.ApplicationId"
+
+        UpdateCommand="UPDATE [library_UserProfile] SET [FirstName] = @FirstName, [LastName = @LastName, [City] = @City, [PostalCode] = @PostalCode WHERE [UserID] = @UserID">
+
+        <DeleteParameters>
+            <asp:Parameter Name="UserID" Type="Object" />
+        </DeleteParameters>
+
+        <SelectParameters>
+            <asp:QueryStringParameter Name="UserID" QueryStringField="UserID" />
+        </SelectParameters>
+
+        <UpdateParameters>
+            <asp:Parameter Name="FirstName" Type="String" />
+            <asp:Parameter Name="LastName" Type="String" />
+            <asp:Parameter Name="City" Type="String" />
+            <asp:Parameter Name="PostalCode" />
+            <asp:Parameter Name="UserID" />
+        </UpdateParameters>
+
+    </asp:SqlDataSource>
     <asp:FormView ID="FormView1" runat="server" DataKeyNames="UserID" DataSourceID="SqlDataSource1" Width="255px">
         <EditItemTemplate>
 
@@ -33,19 +58,22 @@
                 <tr>
                     <td>&nbsp</td><td>&nbsp </td>
                 </tr>
-
+                
                 <tr>
-                    <td align="right">UserID:</td><td align="left"><asp:Label ID="lbl_userID" runat="server" Text='<%# Eval("UserID") %>' /></td>
+                    <td align="right">UserID:</td>
+                    <td align="left"><asp:TextBox ID="lbl_userID" runat="server" Enabled="false" Text='<%# Eval("UserID") %>' /></td>
                 </tr>
                 
                 <tr>
-                    <td align="right">UserName:</td><td align="left"><asp:TextBox ID="tb_userName" enabled="false" runat="server" Text='<%# Bind("UserName") %>' /></td>
+                    <td align="right">UserName:</td>
+                    <td align="left"><asp:TextBox ID="tb_userName" enabled="false" runat="server" Text='<%# Bind("UserName") %>' /></td>
                 </tr>
 
                 <tr>
-                    <td align="right">RoleName:</td><td align="left"><asp:TextBox ID="tb_roleName" runat="server" enabled="false" Text='<%# Bind("RoleName") %>' /></td>
+                    <td align="right">RoleName:</td>
+                    <td align="left"><asp:TextBox ID="tb_roleName" runat="server" enabled="false" Text='<%# Bind("RoleName") %>' /></td>
                 </tr>
-
+                
             </table>
 
             <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
@@ -98,7 +126,7 @@
                 <tr>
                     <td align="right">RoleName:</td><td align="left"><asp:Label ID="lbl_roleName" runat="server" Text='<%# Bind("RoleName") %>' /></td>
                 </tr>
-            
+                
             </table>
 
             <asp:Button ID="EditButton" runat="server" CausesValidation="false" CommandName="Edit" Text="Edit" />
@@ -115,32 +143,9 @@
     <br />
     <asp:Label ID="lbl_deletedPatron" runat="server" Text=""></asp:Label>
     <br />
+    <br />
 
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:msci3300_g1ConnectionString %>"
-        
-        DeleteCommand="DELETE FROM [aspnet_Users] WHERE [UserID] = @UserID"
-
-        SelectCommand="SELECT library_UserProfile.FirstName, library_UserProfile.LastName, library_UserProfile.City, library_UserProfile.PostalCode, aspnet_Users.UserName, aspnet_Roles.RoleName, library_UserProfile.UserID FROM aspnet_Users INNER JOIN library_UserProfile ON aspnet_Users.UserId = library_UserProfile.UserID INNER JOIN aspnet_Roles ON aspnet_Users.ApplicationId = aspnet_Roles.ApplicationId"
-
-        UpdateCommand="UPDATE [library_UserProfile] SET [FirstName] = @FirstName, [LastName = @LastName, [City] = @City, [PostalCode] = @PostalCode WHERE [UserID] = @UserID">
-
-        <DeleteParameters>
-            <asp:Parameter Name="UserID" Type="Object" />
-        </DeleteParameters>
-
-        <SelectParameters>
-            <asp:QueryStringParameter Name="UserID" QueryStringField="UserID" />
-        </SelectParameters>
-
-        <UpdateParameters>
-            <asp:Parameter Name="FirstName" Type="String" />
-            <asp:Parameter Name="LastName" Type="String" />
-            <asp:Parameter Name="City" Type="String" />
-            <asp:Parameter Name="PostalCode" />
-            <asp:Parameter Name="UserID" />
-        </UpdateParameters>
-
-    </asp:SqlDataSource>
+    
 
     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:db_library %>" SelectCommand="SELECT library_Materials.MaterialID, library_Materials.Title, library_Materials.Author, library_Materials.MaterialDescription, library_Rentals.DateDueBack FROM library_Rentals INNER JOIN library_Materials ON library_Rentals.MaterialID = library_Materials.MaterialID WHERE (library_Rentals.UserID = @UserID)">
         <SelectParameters>
