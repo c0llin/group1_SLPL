@@ -42,5 +42,10 @@ Partial Class library
         Response.Redirect("~/default.aspx")
 
     End Sub
+
+    Protected Sub img_search_Click(sender As Object, e As ImageClickEventArgs) Handles img_search.Click
+        'captures textbox search and passes to search page.
+        Response.Redirect("~/search.aspx?searchquery=" + Server.UrlEncode(tb_search.Text))
+    End Sub
 End Class
 

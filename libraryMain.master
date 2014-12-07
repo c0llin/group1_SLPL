@@ -58,7 +58,7 @@
                 </div>  <!--close the menu div -->
             
                 <div id="search">
-                    <asp:TextBox ID="tb_search" width="50%" align="center" runat="server"></asp:TextBox><asp:Image ID="img_search" runat="server" ImageUrl="~/css/images/search.png" />
+                    <asp:TextBox ID="tb_search" width="50%" align="center" runat="server"></asp:TextBox><asp:ImageButton ID="img_search" runat="server" ImageUrl="~/css/images/search.png" />
                 </div>  <!--close the search div -->
 
                 <div class="login_status">   
