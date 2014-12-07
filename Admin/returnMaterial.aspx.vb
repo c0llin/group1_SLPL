@@ -25,5 +25,5 @@ Partial Class Admin_retrunMaterial
 
         Response.Redirect("viewAllRentals.aspx")
 
-    End Sub
+    End Sub 'btn_Return_Click
 End Class
