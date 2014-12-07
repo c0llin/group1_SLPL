@@ -1,4 +1,5 @@
-﻿
+﻿Imports System.Data.SqlClient
+
 Partial Class library
     Inherits System.Web.UI.MasterPage
 
@@ -47,5 +48,10 @@ Partial Class library
         'captures textbox search and passes to search page.
         Response.Redirect("~/search.aspx?searchquery=" + Server.UrlEncode(tb_search.Text))
     End Sub
+
+    Protected Sub todaysDate_Load(sender As Object, e As EventArgs) Handles todaysDate.Load
+        todaysDate.Text = DateTime.Today
+    End Sub
+
 End Class
 
