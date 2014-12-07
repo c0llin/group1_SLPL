@@ -182,6 +182,17 @@
             &nbsp
 
             <asp:Button ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" OnClientClick="return confirm ('Are you sure you want to delete this material?')"  />
+            <br />
+            <br />
+
+
+            <asp:DataList ID="BookPhotoDataList" runat="server" DataSourceID="SQLDataSource1">
+                <ItemTemplate>
+                    <asp:Image ID="BookImage1" runat="server"
+                        ImageUrl='<%# Eval("PhotoName", "~/rental_materials/{0}")%>'/>
+                </ItemTemplate>
+            </asp:DataList>
+
 
         </ItemTemplate>
 
@@ -206,5 +217,10 @@
             <asp:BoundField DataField="PostalCode" HeaderText="PostalCode" SortExpression="PostalCode" />
         </Columns>
     </asp:GridView>
-
+    <asp:SqlDataSource ID="sqlPatronMaterialDetail" runat="server" ConnectionString="<%$ ConnectionStrings:msci3300_g1ConnectionString %>" SelectCommand="SELECT library_UserProfile.UserID, library_UserProfile.FirstName, library_UserProfile.LastName, library_UserProfile.City, library_UserProfile.PostalCode FROM library_Rentals INNER JOIN library_UserProfile ON library_Rentals.UserID = library_UserProfile.UserID WHERE (library_Rentals.MaterialID = @MaterialID)">
+        <SelectParameters>
+            <asp:QueryStringParameter Name="MaterialID" QueryStringField="MaterialID" Type="Int32"/>
+        </SelectParameters>
+    </asp:SqlDataSource>
+    <asp:GridView ID="GridView2" runat="server" DataSourceID="sqlPatronMaterialDetail"></asp:GridView>
 </asp:Content>

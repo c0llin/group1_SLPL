@@ -137,6 +137,22 @@
 
             <br />
 
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:db_library %>" SelectCommand="SELECT library_Materials.MaterialID, library_Materials.Title, library_Materials.Author, library_Materials.MaterialDescription, library_Rentals.DateDueBack FROM library_Rentals INNER JOIN library_Materials ON library_Rentals.MaterialID = library_Materials.MaterialID WHERE (library_Rentals.UserID = @UserID)">
+                <SelectParameters>
+                    <asp:QueryStringParameter Name="UserID" QueryStringField="UserID" />
+                </SelectParameters>
+            </asp:SqlDataSource>
+            <br/>
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="MaterialID" DataSourceID="SqlDataSource2">
+                <Columns>
+                    <asp:BoundField DataField="MaterialID" HeaderText="MaterialID" InsertVisible="False" ReadOnly="True" SortExpression="MaterialID" />
+                    <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
+                    <asp:BoundField DataField="Author" HeaderText="Author" SortExpression="Author" />
+                    <asp:BoundField DataField="MaterialDescription" HeaderText="MaterialDescription" SortExpression="MaterialDescription" />
+                    <asp:BoundField DataField="DateDueBack" HeaderText="DateDueBack" SortExpression="DateDueBack" />
+                </Columns>
+            </asp:GridView>
+
         </ItemTemplate>
     </asp:FormView>
 
@@ -147,22 +163,8 @@
 
     
 
-    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:db_library %>" SelectCommand="SELECT library_Materials.MaterialID, library_Materials.Title, library_Materials.Author, library_Materials.MaterialDescription, library_Rentals.DateDueBack FROM library_Rentals INNER JOIN library_Materials ON library_Rentals.MaterialID = library_Materials.MaterialID WHERE (library_Rentals.UserID = @UserID)">
-        <SelectParameters>
-            <asp:QueryStringParameter Name="UserID" QueryStringField="UserID" />
-        </SelectParameters>
-    </asp:SqlDataSource>
     <br />
     <br />
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="MaterialID" DataSourceID="SqlDataSource2">
-        <Columns>
-            <asp:BoundField DataField="MaterialID" HeaderText="MaterialID" InsertVisible="False" ReadOnly="True" SortExpression="MaterialID" />
-            <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
-            <asp:BoundField DataField="Author" HeaderText="Author" SortExpression="Author" />
-            <asp:BoundField DataField="MaterialDescription" HeaderText="MaterialDescription" SortExpression="MaterialDescription" />
-            <asp:BoundField DataField="DateDueBack" HeaderText="DateDueBack" SortExpression="DateDueBack" />
-        </Columns>
-    </asp:GridView>
-
+    
 </asp:Content>
 
