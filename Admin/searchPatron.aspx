@@ -5,33 +5,29 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     
-    <h3>Search Patrons: </h3>
-    <asp:textbox runat="server" ID="tb_patronSearch"></asp:textbox>
-    <asp:button runat="server" text="Search" ID="btn_Search" />
-
-
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:msci3300_g1ConnectionString %>" SelectCommand="SELECT * FROM [library_UserProfile] WHERE  ([Title] LIKE'%' + @searchterm + '%') OR ([Author] LIKE'%' + @searchterm +'%') OR ([MaterialDescription] LIKE'%' + @searchterm + '%') OR ([ISBN] LIKE'%' + @searchterm + '%') OR ([MaterialID LIKE'%' + @searchterm + '%') ">
-        <SelectParameters>
-            <asp:QueryStringParameter Name="searchterm" QueryStringField="searchquery" Type="String" />
-        </SelectParameters>
-    </asp:SqlDataSource>
+    <%If Not IsPostBack Then%>
+        <h3>
+            <asp:SqlDataSource ID="sqlPatron" runat="server" ConnectionString="<%$ ConnectionStrings:msci3300_g1ConnectionString %>" SelectCommand="SELECT [FirstName], [LastName], [phone], [email] FROM [library_UserProfile]"></asp:SqlDataSource>
+            Search Patrons by Name, Email or Phone # :
+        
+        <asp:textbox runat="server" ID="tb_patronSearch"></asp:textbox>
+        <asp:button runat="server" text="Search" ID="btn_Search" /><br />
+        </h3>
+    <%Else%>
+    <h3>Search Patrons by Name, Email or Phone #:
+     <asp:textbox runat="server" ID="tb_patronSearchPB"></asp:textbox>
+     <asp:button runat="server" text="Search" ID="btn_SearchPatronPB" /><br />
+    </h3>
 
     Results: <br/>
-    <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="False" DataKeyNames="MaterialID">
+    <asp:GridView ID="GridView1" runat="server" DataSourceID="sqlPatron" AutoGenerateColumns="False">
         <Columns>
-            <asp:BoundField DataField="MaterialID" HeaderText="MaterialID" InsertVisible="False" ReadOnly="True" SortExpression="MaterialID" />
-            <asp:BoundField DataField="MaterialType" HeaderText="MaterialType" SortExpression="MaterialType" />
-            <asp:BoundField DataField="CallNumber" HeaderText="CallNumber" SortExpression="CallNumber" />
-            <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
-            <asp:BoundField DataField="Author" HeaderText="Author" SortExpression="Author" />
-            <asp:BoundField DataField="Publisher" HeaderText="Publisher" SortExpression="Publisher" />
-            <asp:BoundField DataField="Copyright" HeaderText="Copyright" SortExpression="Copyright" />
-            <asp:BoundField DataField="ISBN" HeaderText="ISBN" SortExpression="ISBN" />
-            <asp:BoundField DataField="MaterialDescription" HeaderText="MaterialDescription" SortExpression="MaterialDescription" />
-            
-            <asp:BoundField DataField="Available" HeaderText="Available" SortExpression="Available" />
+            <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName" />
+            <asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName" />
+            <asp:BoundField DataField="phone" HeaderText="phone" SortExpression="phone" />
+            <asp:BoundField DataField="email" HeaderText="email" SortExpression="email" />
         </Columns>
     </asp:GridView>
-
+    <%End If%>
 </asp:Content>
 
