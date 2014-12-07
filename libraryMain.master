@@ -12,7 +12,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
-
+        <input type="submit" style="position:absolute;left:-100px;top:-100px;width:0px;height:0px;"
+       onclick="javascript:return false;" /> 
+<!-- other form controls below this line -->
         <div id="container">
             
             <div id="header_container">
@@ -61,7 +63,7 @@
                 </div>  <!--close the menu div -->
             
                 <div id="search">
-                    <asp:TextBox ID="tb_search" width="50%" align="center" runat="server"></asp:TextBox><asp:ImageButton ID="img_search" runat="server" ImageUrl="~/css/images/search.png" />
+                    <asp:TextBox ID="tb_search" width="50%" align="center" runat="server"></asp:TextBox><asp:ImageButton ID="img_search" runat="server" ImageUrl="~/css/images/search.png"/>
                 </div>  <!--close the search div -->
 
                 <div class="login_status">   
