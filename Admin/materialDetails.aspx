@@ -54,12 +54,7 @@
     <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:msci3300_g1ConnectionString %>" 
         SelectCommand="SELECT [Available] FROM [library_Available]">
     </asp:SqlDataSource>
-    <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:db_library %>" 
-        SelectCommand="SELECT library_UserProfile.UserID, library_UserProfile.FirstName, library_UserProfile.LastName, library_UserProfile.City, library_UserProfile.PostalCode FROM library_Rentals INNER JOIN library_UserProfile ON library_Rentals.UserID = library_UserProfile.UserID WHERE (library_Rentals.MaterialID = @materialID)">
-        <SelectParameters>
-            <asp:QueryStringParameter Name="MaterialID" QueryStringField="MaterialID" Type="Int32" />
-        </SelectParameters>
-    </asp:SqlDataSource>
+
     <asp:FormView ID="FormView1" runat="server" DataKeyNames="MaterialID" DataSourceID="SqlDataSource1">
         
         <EditItemTemplate>
@@ -188,41 +183,28 @@
 
             <asp:Button ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" OnClientClick="return confirm ('Are you sure you want to delete this material?')"  />
 
-            <br />
-            <br />
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="UserID" DataSourceID="SqlDataSource4">
-                <Columns>
-                    <asp:BoundField DataField="UserID" HeaderText="UserID" ReadOnly="True" SortExpression="UserID" />
-                    <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName" />
-                    <asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName" />
-                    <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
-                    <asp:BoundField DataField="PostalCode" HeaderText="PostalCode" SortExpression="PostalCode" />
-                </Columns>
-            </asp:GridView>
-
-            <br />
-            <br />
-
-            <asp:DataList ID="MaterialPhotoDataList" runat="server" DataSource="SQLDataSource1">
-                <ItemTemplate>
-
-                <a href='<%# Eval("PhotoName", "../rental_materials/{0}")%>' target="_blank"> 
-                    <asp:Image ID="MaterialImage1" runat="server" 
-                        ImageUrl='<%# Eval("PhotoName", "~/rental_materials/{0}")%>' 
-                        Height="200px"
-                        AlternateText='<%# Eval("MaterialDescription")%>'
-                        ToolTip='<%# Eval("MaterialDescription")%>'
-                        />
-                </a>
-
-                </ItemTemplate>
-            </asp:DataList>
-
         </ItemTemplate>
 
     </asp:FormView>
 
     <asp:Label ID="lbl_DeletedMaterial" runat="server" Text=""></asp:Label>
 
-</asp:Content>
+    <br />
+    <br />
+    <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:db_library %>" SelectCommand="SELECT library_UserProfile.UserID, library_UserProfile.FirstName, library_UserProfile.LastName, library_UserProfile.City, library_UserProfile.PostalCode FROM library_Rentals INNER JOIN library_UserProfile ON library_Rentals.UserID = library_UserProfile.UserID WHERE (library_Rentals.MaterialID = @materialID)">
+        <SelectParameters>
+            <asp:QueryStringParameter Name="materialID" QueryStringField="materialID" />
+        </SelectParameters>
+    </asp:SqlDataSource>
+    <br />
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="UserID" DataSourceID="SqlDataSource4">
+        <Columns>
+            <asp:BoundField DataField="UserID" HeaderText="UserID" ReadOnly="True" SortExpression="UserID" />
+            <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName" />
+            <asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName" />
+            <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
+            <asp:BoundField DataField="PostalCode" HeaderText="PostalCode" SortExpression="PostalCode" />
+        </Columns>
+    </asp:GridView>
 
+</asp:Content>
