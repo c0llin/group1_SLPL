@@ -6,7 +6,7 @@ Partial Class Admin_materialsDueToday
 
         Dim MaterialsDueToday As String
 
-        MaterialsDueToday = "SELECT * FROM library_Rentals WHERE DateDueBack <= CONVERT(datetime, CONVERT(varchar(10), GetDate(), 112))"
+        MaterialsDueToday = "SELECT * FROM library_Rentals WHERE DateDueBack > CONVERT(datetime, CONVERT(varchar(10), GetDate(), 112))"
 
         sdsMaterialsDueToday.SelectCommand = MaterialsDueToday
 
