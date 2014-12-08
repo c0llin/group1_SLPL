@@ -8,7 +8,7 @@
         SelectCommand="SELECT [UserID], [RentalID], [MaterialID], [RentDate], [DateDueBack] FROM [library_Rentals]">
 
     </asp:SqlDataSource>
-    <asp:GridView ID="gvVeiwAllRentals" runat="server" AutoGenerateColumns="False" 
+    <asp:GridView ID="gvVeiwAllRentals" runat="server" CssClass="table table-hover" AutoGenerateColumns="False" 
         DataKeyNames="RentalID" DataSourceID="sdsViewAllRentals">
         <Columns>
             <asp:BoundField DataField="UserID" HeaderText="UserID" 

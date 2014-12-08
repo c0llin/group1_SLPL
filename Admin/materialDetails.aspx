@@ -200,6 +200,22 @@
             </asp:DataList>
 
 
+            <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:db_library %>" SelectCommand="SELECT library_UserProfile.UserID, library_UserProfile.FirstName, library_UserProfile.LastName, library_UserProfile.City, library_UserProfile.PostalCode FROM library_Rentals INNER JOIN library_UserProfile ON library_Rentals.UserID = library_UserProfile.UserID WHERE (library_Rentals.MaterialID = @materialID)">
+                <SelectParameters>
+                    <asp:QueryStringParameter Name="materialID" QueryStringField="materialID" />
+                </SelectParameters>
+            </asp:SqlDataSource>
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="table table-hover" DataKeyNames="UserID" DataSourceID="SqlDataSource4">
+                <Columns>
+                    <asp:BoundField DataField="UserID" HeaderText="UserID" ReadOnly="True" SortExpression="UserID" />
+                    <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName" />
+                    <asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName" />
+                    <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
+                    <asp:BoundField DataField="PostalCode" HeaderText="PostalCode" SortExpression="PostalCode" />
+                </Columns>
+            </asp:GridView>
+
+
         </ItemTemplate>
 
     </asp:FormView>
@@ -208,25 +224,6 @@
 
     <br />
     <br />
-    <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:db_library %>" SelectCommand="SELECT library_UserProfile.UserID, library_UserProfile.FirstName, library_UserProfile.LastName, library_UserProfile.City, library_UserProfile.PostalCode FROM library_Rentals INNER JOIN library_UserProfile ON library_Rentals.UserID = library_UserProfile.UserID WHERE (library_Rentals.MaterialID = @materialID)">
-        <SelectParameters>
-            <asp:QueryStringParameter Name="materialID" QueryStringField="materialID" />
-        </SelectParameters>
-    </asp:SqlDataSource>
     <br />
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="UserID" DataSourceID="SqlDataSource4">
-        <Columns>
-            <asp:BoundField DataField="UserID" HeaderText="UserID" ReadOnly="True" SortExpression="UserID" />
-            <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName" />
-            <asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName" />
-            <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
-            <asp:BoundField DataField="PostalCode" HeaderText="PostalCode" SortExpression="PostalCode" />
-        </Columns>
-    </asp:GridView>
-    <asp:SqlDataSource ID="sqlPatronMaterialDetail" runat="server" ConnectionString="<%$ ConnectionStrings:msci3300_g1ConnectionString %>" SelectCommand="SELECT library_UserProfile.UserID, library_UserProfile.FirstName, library_UserProfile.LastName, library_UserProfile.City, library_UserProfile.PostalCode FROM library_Rentals INNER JOIN library_UserProfile ON library_Rentals.UserID = library_UserProfile.UserID WHERE (library_Rentals.MaterialID = @MaterialID)">
-        <SelectParameters>
-            <asp:QueryStringParameter Name="MaterialID" QueryStringField="MaterialID" Type="Int32"/>
-        </SelectParameters>
-    </asp:SqlDataSource>
-    <asp:GridView ID="GridView2" runat="server" DataSourceID="sqlPatronMaterialDetail"></asp:GridView>
+        
 </asp:Content>

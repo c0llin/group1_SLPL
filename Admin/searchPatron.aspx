@@ -20,7 +20,7 @@
     </h3>
 
     Results: <br/>
-    <asp:GridView ID="GridView1" runat="server" DataSourceID="sqlPatron" AutoGenerateColumns="False">
+    <asp:GridView ID="GridView1" runat="server" CssClass="table table-hover" DataSourceID="sqlPatron" AutoGenerateColumns="False">
         <Columns>
             <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName" />
             <asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName" />

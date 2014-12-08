@@ -8,7 +8,7 @@
         ConnectionString="<%$ ConnectionStrings:db_library %>" 
         SelectCommand="SELECT * FROM [library_Rentals]">
     </asp:SqlDataSource>
-    <asp:GridView ID="gvMaterialsDueToday" runat="server" AutoGenerateColumns="False" 
+    <asp:GridView ID="gvMaterialsDueToday" runat="server" CssClass="table table-hover" AutoGenerateColumns="False" 
         DataKeyNames="RentalID" DataSourceID="sdsMaterialsDueToday">
         <Columns>
             <asp:BoundField DataField="RentalID" HeaderText="RentalID" InsertVisible="False" ReadOnly="True" 

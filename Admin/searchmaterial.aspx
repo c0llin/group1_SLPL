@@ -13,7 +13,7 @@
    <%Else%>
     <h3>Search by title, author, description or call number:&nbsp;&nbsp;&nbsp;<asp:TextBox ID="tb_searchMaterialsPB" runat="server"></asp:TextBox><asp:button runat="server" ID = "btn_searchMaterialsPB" text="Search" />
     </h3>
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
+    <asp:GridView ID="GridView1" runat="server" CssClass="table table-hover" AutoGenerateColumns="False" 
         BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="sqlMaterialSearch" ForeColor="Black" GridLines="Vertical" DataKeyNames="MaterialID">
         <AlternatingRowStyle BackColor="White" />
         <Columns>

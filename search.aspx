@@ -12,7 +12,7 @@
     </asp:SqlDataSource>
 
     Results: <br/>
-    <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="False" DataKeyNames="MaterialID">
+    <asp:GridView ID="GridView1" runat="server" CssClass="table table-hover" DataSourceID="SqlDataSource1" AutoGenerateColumns="False" DataKeyNames="MaterialID">
         <Columns>
             <asp:BoundField DataField="MaterialID" HeaderText="MaterialID" InsertVisible="False" ReadOnly="True" SortExpression="MaterialID" />
             <asp:BoundField DataField="MaterialType" HeaderText="MaterialType" SortExpression="MaterialType" />
