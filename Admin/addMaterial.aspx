@@ -63,57 +63,57 @@
 
         <InsertItemTemplate>
             
-            <table>
+            <table class="table">
 
                 <tr>
-                    <td align="right">Material Type:</td>
-                    <td align="left">
+                    <td>Material Type:</td>
+                    <td>
                         <asp:DropDownList ID="ddl_materialType" runat="server" DataSourceID="SqlDataSource4"
                             DataTextField="MaterialType" DataValueField="MaterialType" SelectedValue='<%# Bind("MaterialType") %>'>
                         </asp:DropDownList></td>
                 </tr>
 
                 <tr>
-                    <td align="right">Call Number:</td>
-                    <td align="left"><asp:TextBox ID="tb_callNumber" runat="server" Text='<%# Bind("CallNumber") %>' /></td>
+                    <td>Call Number:</td>
+                    <td><asp:TextBox ID="tb_callNumber" runat="server" Text='<%# Bind("CallNumber") %>' /></td>
                 </tr>
 
                 <tr>
-                    <td align="right">Title:</td><td align="left">
+                    <td>Title:</td><td >
                         <asp:TextBox ID="tb_title" runat="server" Text='<%# Bind("Title") %>' /></td>
                 </tr>
 
                 <tr>
-                    <td align="right">Author:</td><td align="left">
+                    <td>Author:</td><td>
                         <asp:TextBox ID="tb_author" runat="server" Text='<%# Bind("Author") %>' /></td>
                 </tr>
 
                 <tr>
-                    <td align="right">Publisher:</td><td align="left">
+                    <td>Publisher:</td><td>
                         <asp:TextBox ID="tb_publisher" runat="server" Text='<%# Bind("Publisher") %>' /></td>
                 </tr>
 
                 <tr>
-                    <td align="right">Copyright:</td><td align="left">
+                    <td>Copyright:</td><td>
                         <asp:TextBox ID="tb_copyright" runat="server" Text='<%# Bind("Copyright") %>' /></td>
                 </tr>
             
                  <tr>
-                    <td align="right">ISBN:</td><td align="left">
+                    <td>ISBN:</td><td>
                         <asp:TextBox ID="tb_ISBN" runat="server" Text='<%# Bind("ISBN") %>' /></td>
                 </tr>
             
                 <tr>
-                    <td align="right">Material Description:</td>
-                    <td align="left"><asp:TextBox ID="tb_MaterialDescription" runat="server" Text='<%# Bind("MaterialDescription") %>' /></td>
+                    <td>Material Description:</td>
+                    <td><asp:TextBox ID="tb_MaterialDescription" runat="server" Text='<%# Bind("MaterialDescription") %>' /></td>
                 </tr>
                  <tr>
-                    <td align="right">Photo File:</td>
-                    <td align="left"><asp:TextBox ID="tb_PhotoFile" runat="server" Text='<%# Bind("PhotoName") %>' /></td>
+                    <td>Photo File:</td>
+                    <td><asp:TextBox ID="tb_PhotoFile" runat="server" Text='<%# Bind("PhotoName") %>' /></td>
                 </tr>
                 <tr>
-                    <td align="right">Available:</td>
-                    <td align="left">                        
+                    <td>Available:</td>
+                    <td>                        
                         <asp:DropDownList ID="ddl_available" runat="server" DataSourceID="SqlDataSource3"
                             DataTextField="AvailableStatus" DataValueField="AvailableStatus" SelectedValue='<%# Bind("AvailableStatus")%>'>
                         </asp:DropDownList></td>

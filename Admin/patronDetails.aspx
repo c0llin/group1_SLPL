@@ -32,23 +32,23 @@
     <asp:FormView ID="FormView1" runat="server" DataKeyNames="UserID" DataSourceID="SqlDataSource1" Width="255px">
         <EditItemTemplate>
 
-            <table>
+            <table class="table">
 
                 <tr>
-                    <td align="right">FirstName:</td><td align="left"><asp:TextBox ID="tb_firstName" runat="server" Text='<%# Bind("FirstName") %>' /></td>
+                    <td>FirstName:</td><td align="left"><asp:TextBox ID="tb_firstName" runat="server" Text='<%# Bind("FirstName") %>' /></td>
                 </tr>
 
                 <tr>
-                    <td align="right">LastName:</td><td align="left"><asp:TextBox ID="tb_lastName" runat="server" Text='<%# Bind("LastName") %>' /></td>
+                    <td>LastName:</td><td align="left"><asp:TextBox ID="tb_lastName" runat="server" Text='<%# Bind("LastName") %>' /></td>
                 </tr>
 
                 <tr>
-                    <td align="right">City:</td><td align="left"><asp:TextBox ID="tb_city" runat="server" Text='<%# Bind("City") %>' /></td>
+                    <td>City:</td><td align="left"><asp:TextBox ID="tb_city" runat="server" Text='<%# Bind("City") %>' /></td>
                 </tr>
             
                 <tr>
-                    <td align="right">State:</td>
-                    <td align="left">
+                    <td>State:</td>
+                    <td>
                         <asp:DropDownList ID="ddl_postalCode" runat="server" DataSourceID="SqlDataSource1"
                             DataTextField="PostalCode" DataValueField="PostalCode" SelectedValue='<%# Bind("PostalCode") %>'>
                         </asp:DropDownList>
@@ -60,27 +60,27 @@
                 </tr>
                 
                 <tr>
-                    <td align="right">UserID:</td>
-                    <td align="left"><asp:TextBox ID="lbl_userID" runat="server" Enabled="false" Text='<%# Eval("UserID") %>' /></td>
+                    <td>UserID:</td>
+                    <td><asp:TextBox ID="lbl_userID" runat="server" Enabled="false" Text='<%# Eval("UserID") %>' /></td>
                 </tr>
                 
                 <tr>
-                    <td align="right">UserName:</td>
-                    <td align="left"><asp:TextBox ID="tb_userName" enabled="false" runat="server" Text='<%# Bind("UserName") %>' /></td>
+                    <td>UserName:</td>
+                    <td><asp:TextBox ID="tb_userName" enabled="false" runat="server" Text='<%# Bind("UserName") %>' /></td>
                 </tr>
 
                 <tr>
-                    <td align="right">RoleName:</td>
-                    <td align="left"><asp:TextBox ID="tb_roleName" runat="server" enabled="false" Text='<%# Bind("RoleName") %>' /></td>
+                    <td>RoleName:</td>
+                    <td><asp:TextBox ID="tb_roleName" runat="server" enabled="false" Text='<%# Bind("RoleName") %>' /></td>
                 </tr>
                 
             </table>
 
-            <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
+            <asp:Button ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
 
             &nbsp;&nbsp;
             
-            <asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+            <asp:Button ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
 
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:msci3300_g1ConnectionString %>"
                 SelectCommand="SELECT [PostalCode] FROM [library_States]"></asp:SqlDataSource>
@@ -94,21 +94,21 @@
 
         <ItemTemplate>
             
-            <table>
+            <table class="table">
                 <tr>
-                    <td align="right">FirstName:</td><td align="left"><asp:Label ID="lbl_firstName" runat="server" Text='<%# Bind("FirstName") %>' /></td>
+                    <td>FirstName:</td><td><asp:Label ID="lbl_firstName" runat="server" Text='<%# Bind("FirstName") %>' /></td>
                 </tr>
             
                 <tr>
-                    <td align="right">LastName:</td><td align="left"><asp:Label ID="lbl_lastName" runat="server" Text='<%# Bind("LastName") %>' /></td>
+                    <td>LastName:</td><td><asp:Label ID="lbl_lastName" runat="server" Text='<%# Bind("LastName") %>' /></td>
                 </tr>
 
                 <tr>
-                    <td align="right">City:</td><td align="left"><asp:Label ID="lbl_city" runat="server" Text='<%# Bind("City") %>' /></td>
+                    <td>City:</td><td><asp:Label ID="lbl_city" runat="server" Text='<%# Bind("City") %>' /></td>
                 </tr>
 
                 <tr>
-                    <td align="right">State:</td align="left"><td><asp:Label ID="lbl_postalCode" runat="server" Text='<%# Bind("PostalCode") %>' /></td>
+                    <td>State:</td><td><asp:Label ID="lbl_postalCode" runat="server" Text='<%# Bind("PostalCode") %>' /></td>
                 </tr>
             
                 <tr>
@@ -116,15 +116,15 @@
                 </tr>
                 
                 <tr>
-                    <td align="right">UserID:</td><td align="left"><asp:Label ID="lbl_userID" runat="server" Text='<%# Eval("UserID") %>' /></td>
+                    <td>UserID:</td><td><asp:Label ID="lbl_userID" runat="server" Text='<%# Eval("UserID") %>' /></td>
                 </tr>
                 
                 <tr>
-                    <td align="right">UserName:</td><td align="left"><asp:Label ID="lbl_userName" runat="server" Text='<%# Bind("UserName") %>' /></td>
+                    <td>UserName:</td><td><asp:Label ID="lbl_userName" runat="server" Text='<%# Bind("UserName") %>' /></td>
                 </tr>
             
                 <tr>
-                    <td align="right">RoleName:</td><td align="left"><asp:Label ID="lbl_roleName" runat="server" Text='<%# Bind("RoleName") %>' /></td>
+                    <td>RoleName:</td><td><asp:Label ID="lbl_roleName" runat="server" Text='<%# Bind("RoleName") %>' /></td>
                 </tr>
                 
             </table>
@@ -143,7 +143,7 @@
                 </SelectParameters>
             </asp:SqlDataSource>
             <br/>
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="MaterialID" DataSourceID="SqlDataSource2">
+            <asp:GridView ID="GridView1" runat="server" CssClass="table table-hover" AutoGenerateColumns="False" DataKeyNames="MaterialID" DataSourceID="SqlDataSource2">
                 <Columns>
                     <asp:BoundField DataField="MaterialID" HeaderText="MaterialID" InsertVisible="False" ReadOnly="True" SortExpression="MaterialID" />
                     <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
