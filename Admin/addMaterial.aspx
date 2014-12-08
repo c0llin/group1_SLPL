@@ -8,7 +8,7 @@
          
         DeleteCommand="DELETE FROM [library_Materials] WHERE [MaterialID] = @MaterialID" 
 
-        InsertCommand="INSERT INTO [library_Materials] ([MaterialType], [CallNumber], [Title], [Author], [Publisher], [Copyright], [ISBN], [MaterialDescription], [PhotoName], [Available]) VALUES (@MaterialType, @CallNumber, @Title, @Author, @Publisher, @Copyright, @ISBN, @MaterialDescription, @PhotoName, @Available)" 
+        InsertCommand="INSERT INTO [library_Materials] ([MaterialType], [CallNumber], [Title], [Author], [Publisher], [Copyright], [ISBN], [MaterialDescription], [PhotoName], [Available]) VALUES (@MaterialType, @CallNumber, @Title, @Author, @Publisher, @Copyright, @ISBN, @MaterialDescription, @PhotoName, @AvailableStatus)" 
        
         SelectCommand="SELECT [MaterialID], [MaterialType], [CallNumber], [Title], [Author], [Publisher], [Copyright], [ISBN], [MaterialDescription], [PhotoName], [Available] FROM [library_Materials]" 
         
@@ -24,11 +24,11 @@
             <asp:Parameter Name="Title" Type="String" />
             <asp:Parameter Name="Author" Type="String" />
             <asp:Parameter Name="Publisher" Type="String" />
-            <asp:Parameter Name="Copyright" Type="Double" />
-            <asp:Parameter Name="ISBN" Type="Double" />
+            <asp:Parameter Name="Copyright" Type="String" />
+            <asp:Parameter Name="ISBN" Type="String" />
             <asp:Parameter Name="MaterialDescription" Type="String" />
             <asp:Parameter Name="PhotoName" Type="String" />
-            <asp:Parameter Name="Available" Type="String" />
+            <asp:Parameter Name="AvailableStatus" Type="String" />
         </InsertParameters>
         
         <UpdateParameters>
@@ -37,8 +37,8 @@
             <asp:Parameter Name="Title" Type="String" />
             <asp:Parameter Name="Author" Type="String" />
             <asp:Parameter Name="Publisher" Type="String" />
-            <asp:Parameter Name="Copyright" Type="Double" />
-            <asp:Parameter Name="ISBN" Type="Double" />
+            <asp:Parameter Name="Copyright" Type="String" />
+            <asp:Parameter Name="ISBN" Type="String" />
             <asp:Parameter Name="MaterialDescription" Type="String" />
             <asp:Parameter Name="PhotoName" Type="String" />
             <asp:Parameter Name="Available" Type="String" />
@@ -52,7 +52,7 @@
     </asp:SqlDataSource>
     
     <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:msci3300_g1ConnectionString %>" 
-        SelectCommand="SELECT [Available] FROM [library_Available]">
+        SelectCommand="SELECT AvailableStatus FROM library_AvailableStatus">
     </asp:SqlDataSource>
 
     <asp:FormView ID="FormView1" runat="server" DataKeyNames="MaterialID" DataSourceID="SqlDataSource1" DefaultMode="Insert">
@@ -112,7 +112,7 @@
                     <td align="right">Available:</td>
                     <td align="left">                        
                         <asp:DropDownList ID="ddl_available" runat="server" DataSourceID="SqlDataSource3"
-                            DataTextField="Available" DataValueField="Available" SelectedValue='<%# Bind("Available")%>'>
+                            DataTextField="AvailableStatus" DataValueField="AvailableStatus" SelectedValue='<%# Bind("AvailableStatus")%>'>
                         </asp:DropDownList></td>
                 </tr>
          
