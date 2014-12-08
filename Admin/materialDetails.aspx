@@ -108,7 +108,10 @@
                     <td align="right">Material Description:</td>
                     <td align="left"><asp:TextBox ID="tb_MaterialDescription" runat="server" Text='<%# Bind("MaterialDescription") %>' /></td>
                 </tr>
-                 
+                 <tr>
+                    <td align="right">Photo File:</td>
+                    <td align="left"><asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("PhotoName") %>' /></td>
+                </tr>
                  <tr>
                     <td align="right">Available:</td>
                     <td align="left"><asp:TextBox ID="tb_Available" runat="server" Text='<%# Bind("Available") %>' /></td>
