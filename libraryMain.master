@@ -24,7 +24,7 @@
                 </div> <!-- Close left_logo -->
                 
                 <div id="header_text">
-                    <h4>South Liberty<br />Public Library</h4>
+                    <h2>South Liberty<br />Public Library</h2>
                     321 Main St., <br />
                     South Liberty, IA 12345<br />
                     319.555.1212&nbsp;&nbsp;<a href="https://www.google.com/maps/search/public+library+near+North+Liberty,+IA/@41.7455985,-91.6168012,15z?hl=en">(map)</a><br />
@@ -38,9 +38,9 @@
 
             </div>  <!--Close the header_container div -->
 
-            <nav id="menu_container">     
+            <div id="menu_container">     
                 
-                <nav id="menu">
+                <div id="menu">
 
                     <asp:Menu ID="libraryMenu" runat="server" Orientation="Horizontal" StaticSubMenuIndent="16px" CssClass="static">
                         <Items>
@@ -63,7 +63,7 @@
                         </Items>
                     </asp:Menu>
             
-                </nav>  <!--close the menu div -->
+                </div>  <!--close the menu div -->
             
                 <div id="search">
                     <asp:TextBox ID="tb_search" width="50%" align="center" runat="server"></asp:TextBox><asp:ImageButton ID="img_search" runat="server" ImageUrl="~/css/images/search.png"/>
@@ -83,7 +83,7 @@
 
                 </div>  <!--close the login_status div -->
 
-            </nav>  <!--close the menu_containter div -->
+            </div>  <!--close the menu_containter div -->
 
             <div id="main">
                 <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
